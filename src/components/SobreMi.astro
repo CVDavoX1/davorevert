@@ -1,0 +1,60 @@
+---
+// src/components/SobreMi.astro
+const habilidadesTecnicas = [
+  "Laravel", "PHP", "Astro", "Tailwind CSS", 
+  "JavaScript", "Alpine.js", "Python", "Git"
+];
+---
+
+<section id="sobre-mi" class="py-16 border-t border-gray-200">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
+    
+    <!-- Columna Izquierda: Introducción -->
+    <div class="md:col-span-2 space-y-4">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900">
+        Sobre mí
+      </h2>
+      
+      <p class="text-gray-600 leading-relaxed">
+        Soy estudiante de <strong class="text-gray-900">Ingeniería en Computación</strong> enfocado en el desarrollo de software web. Me apasiona construir soluciones eficientes, desde la arquitectura del backend hasta interfaces limpias y de alto rendimiento en el frontend.
+      </p>
+
+      <p class="text-gray-600 leading-relaxed">
+        Tengo experiencia desarrollando sistemas web con arquitecturas MVC como Laravel, así como en el diseño de plataformas rápidas utilizando tecnologías modernas e hiperligeras como Astro y Tailwind CSS.
+      </p>
+
+      <div class="pt-4 flex items-center gap-4">
+        <a 
+          href="#contacto" 
+          class="px-5 py-2.5 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition shadow-sm"
+        >
+          Contactar
+        </a>
+        <a 
+          href="https://github.com/CVDavoX1" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="px-5 py-2.5 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition"
+        >
+          Ver Github
+        </a>
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Habilidades / Stack -->
+    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-4">
+      <h3 class="text-lg font-bold text-gray-900">
+        Tecnologías & Stack
+      </h3>
+      
+      <div class="flex flex-wrap gap-2">
+        {habilidadesTecnicas.map((tech) => (
+          <span class="px-3 py-1 bg-indigo-50 text-indigo-700 font-medium text-sm rounded-md border border-indigo-100">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
