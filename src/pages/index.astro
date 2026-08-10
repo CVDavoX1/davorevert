@@ -1,17 +1,23 @@
 ---
-
+// src/pages/index.astro
+// Importamos la plantilla principal
+import MainLayout from '../layouts/MainLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout titulo="Inicio">
+  
+  <section class="py-20">
+    <h1 class="text-5xl font-extrabold mb-4">
+      Hola, soy <span class="text-indigo-600">David</span>
+    </h1>
+    <p class="text-xl text-gray-600 mb-8">
+      Ingeniero en Computación. Construyo aplicaciones web rápidas, ágiles y modernas usando Laravel, Astro y Tailwind.
+    </p>
+    <a href="https://github.com/CVDavoX1" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800">
+      Mi GitHub
+    </a>
+  </section>
+
+  <!-- Puedes ir agregando más secciones aquí abajo (Proyectos, Sobre mi, etc) -->
+
+</MainLayout>

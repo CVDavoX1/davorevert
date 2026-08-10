@@ -1,0 +1,36 @@
+---
+// src/layouts/MainLayout.astro
+// Esto actúa como las variables que le pasas desde un controlador a una vista
+import '../styles/global.css';
+const { titulo } = Astro.props;
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{titulo} | Dev.Portfolio</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    
+    <header class="bg-white shadow-sm sticky top-0 z-10 py-4 px-6">
+      <div class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-bold text-indigo-600">David</a>
+        <nav class="space-x-4">
+          <a href="#proyectos" class="hover:text-indigo-600">Proyectos</a>
+          <a href="#laboratorio" class="hover:text-indigo-600">Laboratorio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+      <!-- Aquí es donde se inyectará el contenido de tus páginas (El equivalente a @yield('content')) -->
+      <slot />
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm mt-12 border-t">
+      <p>&copy; {new Date().getFullYear()} David Omar Romero Cabrera.</p>
+    </footer>
+    
+  </body>
+</html>
